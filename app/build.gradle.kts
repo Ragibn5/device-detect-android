@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":devicedetect"))
+    implementation(project(":device_detect"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

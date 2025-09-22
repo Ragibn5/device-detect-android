@@ -32,7 +32,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
     publishing {
@@ -57,8 +57,8 @@ publishing {
     publications {
         create<MavenPublication>("release") {
             groupId = "com.ragibn5"
-            artifactId = "devicedetect"
-            version = "0.0.5"
+            artifactId = "device-detect"
+            version = "1.0.0"
 
             afterEvaluate {
                 from(components["release"])
