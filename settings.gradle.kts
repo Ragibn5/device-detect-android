@@ -27,4 +27,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DeviceDetectImpl"
 include(":app")
-include(":devicedetect")
+include(":device_detect")
