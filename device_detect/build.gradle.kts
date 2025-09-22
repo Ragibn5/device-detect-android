@@ -58,7 +58,7 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.ragibn5"
             artifactId = "device-detect"
-            version = "1.0.0"
+            version = "0.0.7"
 
             afterEvaluate {
                 from(components["release"])
