@@ -5,7 +5,7 @@ import java.io.File
 /**
  * Simple terminal interface.
  */
-interface Terminal {
+internal interface Terminal {
     /**
      * Execute command.
      *
@@ -25,7 +25,7 @@ interface Terminal {
 /**
  * Default terminal implementation.
  * */
-class DefaultTerminal : Terminal {
+internal class DefaultTerminal : Terminal {
     override fun executeCommand(
         command: String,
         workingDir: File?,
