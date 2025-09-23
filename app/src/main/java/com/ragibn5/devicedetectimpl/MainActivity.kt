@@ -12,7 +12,6 @@ import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.ragibn5.devicedetect.DeviceVendor
-import com.ragibn5.devicedetect.utils.DefaultTerminal
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             val vendor = DeviceVendor.detect()
             val fingerprint = Build.FINGERPRINT
-            val commandResult = DefaultTerminal().executeCommand("getprop") ?: "N/A"
+            val commandResult = getPropCommandResult()
             CoroutineScope(Dispatchers.Main).launch {
                 findViewById<TextView>(R.id.overview).text = String.format(
                     "Brand: %s\nManufacturer: %s\nOS: %s\n\nFINGERPRINT: %s",
@@ -163,5 +162,13 @@ class MainActivity : AppCompatActivity() {
             .replace("!", "_")
             .replace("+", "_")
             .replace("=", "_");
+    }
+
+    fun getPropCommandResult(): String {
+        return Runtime.getRuntime()
+            .exec("getprop")
+            .inputStream
+            .bufferedReader()
+            .use { it.readText() }
     }
 }

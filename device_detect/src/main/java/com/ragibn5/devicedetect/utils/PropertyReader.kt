@@ -3,7 +3,7 @@ package com.ragibn5.devicedetect.utils
 /**
  * Simple terminal interface.
  */
-fun interface PropertyReader {
+internal fun interface PropertyReader {
     /**
      * Get a system property.
      *
@@ -14,7 +14,7 @@ fun interface PropertyReader {
 }
 
 
-class DefaultPropertyReader(private val terminal: Terminal) : PropertyReader {
+internal class DefaultPropertyReader(private val terminal: Terminal) : PropertyReader {
     override fun getProp(propName: String): String? {
         return runCatching { terminal.executeCommand("getprop $propName") }.getOrElse {
             it.printStackTrace()
