@@ -107,7 +107,7 @@ rootProject.allprojects {
 Add this to your module build.gradle:
 
 ```groovy
-implementation 'com.github.Ragibn5:device-detect:v0.0.7'
+implementation 'com.github.Ragibn5:device-detect:v0.0.9'
 ```
 
 ## Contributing
