@@ -1,4 +1,4 @@
-# devicedetect
+# device-detect
 
 A lightweight library for retrieving type-safe device and manufacturer-specific information on
 Android.
@@ -45,13 +45,13 @@ findViewById<TextView>(R.id.preview).setText(
 
 Available info (as of now):
 
-- [DeviceVendor](devicedetect/src/main/java/com/ragibn5/devicedetect/DeviceVendor.kt)
+- [DeviceVendor](device_detect/src/main/java/com/ragibn5/devicedetect/DeviceVendor.kt)
   A value type containing the brand and manufacturer info.
-- [DeviceBrand](devicedetect/src/main/java/com/ragibn5/devicedetect/DeviceBrand.kt)
+- [DeviceBrand](device_detect/src/main/java/com/ragibn5/devicedetect/DeviceBrand.kt)
   An enum type representing the brand of the device.
-- [DeviceManufacturer](devicedetect/src/main/java/com/ragibn5/devicedetect/DeviceManufacturer.kt)
+- [DeviceManufacturer](device_detect/src/main/java/com/ragibn5/devicedetect/DeviceManufacturer.kt)
   An enum type representing the manufacturer of the device.
-- [DeviceOS](devicedetect/src/main/java/com/ragibn5/devicedetect/DeviceOS.kt)
+- [DeviceOS](device_detect/src/main/java/com/ragibn5/devicedetect/DeviceOS.kt)
   An enum type representing the operating system of the device.
 
 Note, The OS detection is verified for only Xiaomi, Transsion, and Nothing devices as of now.
@@ -70,7 +70,7 @@ To build and publish a new release version of the library (to your local Maven r
 
 **Note:**
 Make sure you change the version inside the `publishing` block of the library's
-[`build.gradle`](devicedetect/build.gradle.kts) file before creating a new local release.
+[`build.gradle`](device_detect/build.gradle.kts) file before creating a new local release.
 Running the above command while not changing the version will overwrite the previous release build
 files.
 
